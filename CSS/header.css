@@ -1,0 +1,72 @@
+.titulo {
+  max-width: 1200px;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  line-height: 1.4rem;
+  letter-spacing: 1.2rem;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 2.5rem;
+  color: yellow;
+}
+
+.menu-navegacao {
+  background-color: #131a2e8e;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* Estilo base de cada link do menu */
+.menu-navegacao a {
+  color: yellow;
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease; /* Transição suave de cor */
+}
+
+.menu-navegacao a:hover {
+  background-color: #0066cc;
+  color: #ffffff;
+}
+
+.menu-navegacao a:active {
+  background-color: #004499;
+}
+
+nav a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: #38bdf8;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a.ativo::after {
+  width: 100%;
+}

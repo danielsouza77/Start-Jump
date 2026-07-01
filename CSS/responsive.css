@@ -1,0 +1,468 @@
+/* Tablet */
+/* header */
+@media (max-width: 1024px) {
+  .titulo {
+    font-size: 2rem;
+    letter-spacing: 0.8rem;
+    gap: 40px;
+  }
+
+  .menu-navegacao {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .menu-navegacao a {
+    font-size: 1rem;
+  }
+}
+
+/* celulares ate 768px */
+/* header */
+
+@media (max-width: 768px) {
+  /* Remove o efeito parallax */
+  .home,
+  .recomendacoes,
+  .noticias,
+  .contatos {
+    background-attachment: scroll;
+  }
+
+  .titulo {
+    font-size: 1.6rem;
+    letter-spacing: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .menu-navegacao {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .menu-navegacao a {
+    display: block;
+    width: 180px;
+    text-align: center;
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+/* Celulares ate 480px */
+/* header */
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .menu-navegacao {
+    padding: 15px;
+  }
+
+  .menu-navegacao a {
+    width: 150px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet - Inicio */
+
+@media (max-width: 1024px) {
+  .inicio {
+    padding: 20px;
+  }
+
+  .descricao {
+    font-size: 1.6rem;
+  }
+
+  .card-geral {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .card img {
+    height: 260px;
+  }
+
+  .card-conteudo h2 {
+    font-size: 1.3rem;
+  }
+
+  .card-conteudo p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Celulares ate 768px - Inicio */
+
+@media (max-width: 768px) {
+  .inicio {
+    padding: 15px;
+  }
+
+  .descricao {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }
+
+  .card-geral {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .card img {
+    height: 240px;
+  }
+
+  .card-conteudo {
+    padding: 15px;
+  }
+
+  .card-conteudo h2 {
+    font-size: 1.2rem;
+  }
+
+  .card-conteudo p {
+    font-size: 1rem;
+  }
+
+  .card-botao {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
+  .link-trailer {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .lancamentos {
+    background-attachment: scroll;
+  }
+}
+
+/* Celulares ate 480px - Inicio */
+@media (max-width: 480px) {
+  .descricao {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  .card img {
+    height: 200px;
+  }
+}
+
+/* Tablet - Recomendações */
+@media (max-width: 1024px) {
+  .titulo-recomendacoes {
+    font-size: 1.8rem;
+  }
+
+  .card-recomendacao {
+    max-width: 95%;
+  }
+
+  .card-recomendacao img {
+    height: 450px;
+  }
+
+  .texto-recomendacao h2 {
+    font-size: 1.8rem;
+  }
+
+  .texto-recomendacao p {
+    font-size: 1.3rem;
+  }
+
+  .avaliacao {
+    gap: 30px;
+    margin: 30px 15px;
+  }
+
+  .pontos li {
+    font-size: 1.1rem;
+  }
+}
+
+/* Celulares ate 768px - Recomendações */
+@media (max-width: 768px) {
+  .titulo-recomendacoes {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .card-recomendacao {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .card-recomendacao img {
+    height: 250px;
+  }
+
+  .texto-recomendacao {
+    padding: 15px;
+  }
+
+  .texto-recomendacao h2 {
+    font-size: 1.5rem;
+    white-space: normal;
+  }
+
+  .texto-recomendacao p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .avaliacao {
+    flex-direction: column;
+    margin: 20px;
+    gap: 30px;
+  }
+
+  .pontos-positivos,
+  .pontos-negativos {
+    width: 100%;
+  }
+
+  .pontos-positivos h3,
+  .pontos-negativos h3 {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .pontos {
+    padding-left: 25px;
+  }
+
+  .pontos li {
+    font-size: 1rem;
+  }
+}
+
+/* Celulares ate 480px - Recomendações */
+@media (max-width: 480px) {
+  .card-recomendacao img {
+    height: 200px;
+  }
+
+  .titulo-recomendacoes {
+    font-size: 1.3rem;
+  }
+
+  .texto-recomendacao h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Tablet - Notícias */
+@media (max-width: 1024px) {
+  .titulo-noticias {
+    font-size: 1.8rem;
+  }
+
+  .card-noticias {
+    max-width: 95%;
+  }
+
+  .card-noticias img {
+    height: 500px;
+  }
+
+  .texto-noticias h2 {
+    font-size: 1.8rem;
+  }
+
+  .texto-noticias p {
+    font-size: 1.3rem;
+  }
+
+  .valores {
+    gap: 30px;
+  }
+
+  .versao1 h3,
+  .versao2 h3 {
+    font-size: 1.6rem;
+  }
+
+  .preços li {
+    font-size: 1.1rem;
+  }
+}
+
+/* Celulares ate 768px - Notícias */
+@media (max-width: 768px) {
+  .titulo-noticias {
+    font-size: 1.5rem;
+  }
+
+  .card-noticias {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .card-noticias img {
+    height: 250px;
+  }
+
+  .texto-noticias {
+    padding: 15px;
+  }
+
+  .texto-noticias h2 {
+    font-size: 1.4rem;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .texto-noticias p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .valores {
+    flex-direction: column;
+    gap: 25px;
+    margin: 20px 0;
+  }
+
+  .versao1,
+  .versao2 {
+    width: 100%;
+  }
+
+  .versao1 h3,
+  .versao2 h3 {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .preços {
+    padding-left: 25px;
+  }
+
+  .preços li {
+    font-size: 1rem;
+  }
+
+  .botao {
+    width: 100%;
+    max-width: 300px;
+
+    font-size: 1rem;
+  }
+}
+
+/* Celulares ate 480px - Notícias */
+@media (max-width: 480px) {
+  .card-noticias img {
+    height: 200px;
+  }
+
+  .titulo-noticias {
+    font-size: 1.3rem;
+  }
+
+  .texto-noticias h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet - Contatos  */
+@media (max-width: 1024px) {
+  .secao-contato {
+    min-height: 600px;
+    padding: 30px;
+  }
+
+  .formulario-wrapper {
+    max-width: 500px;
+  }
+}
+
+/* Celulares ate 768px - Contatos */
+@media (max-width: 768px) {
+  .contatos {
+    overflow: visible;
+  }
+
+  .secao-contato {
+    min-height: auto;
+    padding: 30px 20px;
+  }
+
+  .formulario-wrapper {
+    width: 100%;
+    padding: 25px;
+    border-radius: 15px;
+  }
+
+  .formulario-wrapper h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .formulario-wrapper p {
+    text-align: center;
+  }
+
+  .grupo-campo input,
+  .grupo-campo textarea {
+    font-size: 16px;
+  }
+
+  .btn-enviar {
+    font-size: 16px;
+  }
+}
+
+/* Celulares ate 480px - Contatos */
+@media (max-width: 480px) {
+  .formulario-wrapper {
+    padding: 20px;
+  }
+
+  .formulario-wrapper h2 {
+    font-size: 1.4rem;
+  }
+
+  .icone-check {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+  }
+}

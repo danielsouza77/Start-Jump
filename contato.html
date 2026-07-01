@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre em contato com a equipe da Start Jump para enviar sugestões, dúvidas, críticas ou recomendações sobre o conteúdo do site.">
+  <meta name="keywords" content="contato, Start Jump, suporte, sugestões, dúvidas, games">
+  <meta name="author" content="Daniel Souza Barbosa">
+  <meta name="robots" content="index, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./CSS/responsive.css">
+  <link rel="icon" href="./img/icon/icon.svg">
+
+  <title>Contato | Start Jump</title>
+</head>
+
+
+<body class="contatos">
+  <header class="header">
+    <!-- Nome do site  -->
+    <div class="titulo">
+      <h1>Start Jump</h1>
+    </div>
+    <nav>
+      <!-- Menu das paginas feito com listas  -->
+      <ul class="menu-navegacao">
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./recomendacoes.html">Recomendações</a></li>
+        <li><a href="./noticias.html">Notícias</a></li>
+        <li><a href="./contato.html" class="ativo">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="secao-contato">
+      <div class="formulario-wrapper">
+
+        <!-- Este bloco controla o que aparece na tela -->
+        <div id="conteudo-formulario">
+          <h2>Entre em Contato</h2>
+          <p>Preencha os campos abaixo e responderemos o mais rápido possível.</p>
+
+          <form class="form-contato">
+            <div class="grupo-campo">
+              <label for="nome">Nome Completo</label>
+              <input type="text" id="nome" required placeholder="Digite seu nome">
+            </div>
+
+            <div class="grupo-campo">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" required placeholder="seu-email">
+            </div>
+
+            <div class="grupo-campo">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" rows="5" required placeholder="Escreva sua mensagem..."></textarea>
+            </div>
+
+            <button type="submit" class="botao-enviar">Enviar Mensagem</button>
+          </form>
+        </div>
+
+        <!-- Esta mensagem começa escondida e só aparece no final -->
+        <div id="mensagem-sucesso" style="display: none; text-align: center; padding: 30px 10px;">
+          <div class="icone-check">✓</div>
+          <h2>Mensagem Enviada!</h2>
+          <p>Obrigado pelo contato. Responderemos em breve.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">
+      <h1>START JUMP</h1>
+      <p>Tudo de mais novo.</p>
+    </div>
+
+    <div class="footer-menu">
+      <a href="index.html">Início</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="recomendacoes.html">Recomendações</a>
+      <a href="contato.html">Contato</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://www.instagram.com/danielsouza_221/">Instagram</a>
+      <a href="https://github.com/danielsouza77">GitHub</a>
+    </div>
+
+    <div class="footer-copy">
+      <p>© 2026 Start Jump • Desenvolvido por Daniel Souza Barbosa</p>
+    </div>
+  </footer>
+
+  <script>
+    // Aguarda o HTML carregar 100% para garantir que os elementos existam na tela
+    document.addEventListener('DOMContentLoaded', () => {
+      // Seleciona o formulário através da classe CSS '.form-contato'
+      const formulario = document.querySelector('.form-contato');
+
+      // Só executa o código interno se o formulário realmente existir na página
+      if (formulario) {
+        // Escuta o momento em que o usuário tenta enviar o formulário (clique no botão)
+        formulario.addEventListener('submit', function (e) {
+          e.preventDefault(); // Impede o comportamento padrão de recarregar a página
+
+          // Captura os valores digitados e usa o .trim() para remover espaços vazios nas pontas
+          const nome = document.getElementById('nome').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const mensagem = document.getElementById('mensagem').value.trim();
+
+          // Expressão regular (Regex) para validar o formato padrão de e-mail (ex@ex.com)
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          // Validação do campo Nome: verifica se foi deixado em branco
+          if (nome === "") {
+            alert("Por favor, preencha o campo Nome Completo.");
+            return; // Interrompe a execução do código aqui (não envia o form)
+          }
+
+          // Validação do campo E-mail: testa o valor contra a regra Regex criada acima
+          if (!emailRegex.test(email)) {
+            alert("Por favor, insira um e-mail válido.");
+            return; // Interrompe a execução do código aqui
+          }
+
+          // Validação do campo Mensagem: exige um tamanho mínimo de texto
+          if (mensagem.length < 10) {
+            alert("A sua mensagem está muito curta. Escreva pelo menos 10 caracteres.");
+            return; // Interrompe a execução do código aqui
+          }
+
+          // Seleciona os blocos de layout (o formulário atual e a div de sucesso)
+          const blocoFormulario = document.getElementById('conteudo-formulario');
+          const blocoSucesso = document.getElementById('mensagem-sucesso');
+
+          // Aplica as mudanças no estilo CSS para alternar as telas
+          blocoFormulario.style.display = 'none'; // Esconde os campos do formulário
+          blocoSucesso.style.display = 'block';   // Exibe a mensagem de sucesso
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>

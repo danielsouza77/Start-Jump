@@ -1,0 +1,92 @@
+.secao-contato {
+  width: 100%;
+  min-height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Caixa do formulário ajustada */
+.formulario-wrapper {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.formulario-wrapper h2 {
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.formulario-wrapper p {
+  margin: 0 0 20px 0;
+  color: #665;
+  font-size: 14px;
+}
+
+.grupo-campo {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.grupo-campo label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.grupo-campo input,
+.grupo-campo textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.grupo-campo input:focus,
+.grupo-campo textarea:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+.grupo-campo textarea {
+  resize: none; /* Impede o usuário de esticar e quebrar o layout */
+}
+
+.botao-enviar {
+  width: 100%;
+  padding: 12px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao-enviar:hover {
+  background: #0052a3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo do ícone de sucesso */
+.icone-check {
+  width: 60px;
+  height: 60px;
+  background-color: #2e7d32;
+  color: white;
+  font-size: 30px;
+  line-height: 60px;
+  border-radius: 50%;
+  margin: 0 auto 15px auto;
+  font-weight: bold;
+}

@@ -1,0 +1,20 @@
+/* body de todas as paginas  */
+@import "./CSS/global.css";
+
+/* Estilização do cabeçalho */
+@import "./CSS/header.css";
+
+/* Estilização de pagina inicial */
+@import "./CSS/inicio.css";
+
+/* Estilização da pagina noticias */
+@import "./CSS/noticias.css";
+
+/* Estilização da pagina recomendações */
+@import "./CSS/recomendacoes.css";
+
+/* Estilização da pagina contatos */
+@import "./CSS/contatos.css";
+
+/* Responsividade das paginas  */
+@import "./CSS/responsive.css";

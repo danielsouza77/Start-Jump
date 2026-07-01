@@ -1,0 +1,112 @@
+.jogos-noticias {
+  display: grid;
+  gap: 80px;
+  max-width: 100%;
+  justify-items: center;
+  padding: 10px;
+}
+
+.conteudo-noticias {
+  flex-grow: 1;
+}
+
+.titulo-noticias {
+  margin-top: 0;
+  text-align: center;
+  color: #f7f7f7;
+  font-size: 2rem;
+  padding: 2px 5px;
+}
+
+.card-noticias {
+  display: flex;
+  background: #1e293b;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.card-noticias img {
+  width: 100%;
+  height: 750px;
+}
+
+.texto-noticias {
+  padding: 20px 20px;
+  flex-grow: 1;
+  margin-top: 0;
+  white-space: normal;
+}
+
+.texto-noticias h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #f7f7f7;
+}
+
+.texto-noticias p {
+  font-size: 1.65rem;
+  color: aliceblue;
+}
+
+span {
+  color: yellowgreen;
+}
+
+.valores {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 10px;
+}
+
+.versao1,
+.versao2 {
+  width: 45%;
+}
+
+.versao1 h3,
+.versao2 h3 {
+  font-size: 2rem;
+  color: yellowgreen;
+  text-align: start;
+}
+
+.preços {
+  display: block;
+  margin-top: 15px;
+  padding-left: 20px;
+  align-items: center;
+}
+
+.preços li {
+  font-size: 1.4rem;
+  list-style: disc;
+  color: #cbd5e1;
+  margin-bottom: 10px;
+}
+
+.botao {
+  display: block;
+  padding: 10px 5px;
+  background-color: #007bff00;
+  color: yellow;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.noticia-gta6 {
+  display: none;
+  margin-top: 15px;
+}
+
+.noticia-gta6.ativa {
+  display: block;
+}
