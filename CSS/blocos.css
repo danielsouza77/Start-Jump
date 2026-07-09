@@ -1,0 +1,124 @@
+/* ==========================
+   TÍTULOS DOS BLOCOS
+========================== */
+
+.titulo-conteudo {
+  color: yellow;
+  font-size: 2rem;
+  margin: 40px 0 20px;
+}
+
+/* ==========================
+   PARÁGRAFOS
+========================== */
+
+.conteudo-artigo p,
+.conteudo-review p {
+  color: aliceblue;
+  font-size: 1.6rem;
+  line-height: 1.9;
+  text-align: justify;
+  margin-bottom: 25px;
+}
+
+/* ==========================
+   IMAGENS
+========================== */
+
+.imagem-conteudo {
+  width: 100%;
+  display: block;
+  margin: 35px 0;
+  border-radius: 15px;
+}
+
+/* ==========================
+   VÍDEOS
+========================== */
+
+.video-conteudo {
+  margin: 35px 0;
+}
+
+.video-conteudo iframe {
+  width: 100%;
+  height: 650px;
+  border: none;
+  border-radius: 15px;
+}
+
+/* ==========================
+   LISTAS
+========================== */
+
+.lista-conteudo {
+  margin: 30px 0;
+  padding-left: 25px;
+}
+
+.lista-conteudo li {
+  color: #e2e8f0;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* ==========================
+   CITAÇÕES
+========================== */
+
+.citacao-conteudo {
+  margin: 35px 0;
+  padding: 20px 25px;
+  border-left: 5px solid #38bdf8;
+  background: #162133;
+  color: #ffffff;
+  font-style: italic;
+  border-radius: 10px;
+}
+
+/* ==========================
+   DIVISORES
+========================== */
+
+.divisor-conteudo {
+  width: 100%;
+  height: 1px;
+  background: #334155;
+  margin: 40px 0;
+}
+
+/* =========================== 
+ Autor
+=========================== */
+.autor-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.foto-autor {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #38bdf8;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.foto-autor:hover {
+  transform: scale(1.08);
+}
+
+.nome-autor {
+  color: #e9e9e9;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.data-autor {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}

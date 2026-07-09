@@ -1,0 +1,272 @@
+.artigo {
+  width: 100%;
+  max-width: 1400px;
+  margin: 50px auto;
+  background: #1e293b;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Cabeçalho */
+
+.cabecalho-artigo {
+  padding: 40px;
+}
+
+.cabecalho-artigo h1 {
+  margin: 15px 0;
+  color: yellow;
+  font-size: 3rem;
+}
+
+/* Banner */
+
+.banner-artigo {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+/* Conteúdo */
+
+.conteudo-artigo {
+  padding: 40px;
+}
+
+/* Categoria */
+
+.categoria-artigo {
+  display: inline-block;
+  padding: 6px 15px;
+  background: #007bff;
+  color: #e2e8f0;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Título */
+
+.conteudo-artigo h1 {
+  font-size: 3rem;
+  color: yellow;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Informações */
+
+/* Links */
+
+.conteudo-artigo a {
+  color: #38bdf8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.conteudo-artigo a:hover {
+  color: #ffffff;
+}
+
+/* Listas */
+
+.conteudo-artigo ul,
+.conteudo-artigo ol {
+  color: #e2e8f0;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  padding-left: 25px;
+}
+
+.listas-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.lista-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+  margin: 40px 10px;
+  width: 45%;
+}
+
+.imagem-lista {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.overlay-lista {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 25px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.88));
+}
+
+.lista-card h3 {
+  color: #e2e8f0;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.lista-card ul {
+  padding-left: 20px;
+}
+
+.lista-card li {
+  margin-bottom: 10px;
+  color: #e7e7e7;
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+/* ==========================
+   TABLETS
+========================== */
+
+@media (max-width: 992px) {
+  .artigo {
+    margin: 30px 20px;
+  }
+
+  .cabecalho-artigo,
+  .conteudo-artigo {
+    padding: 30px;
+  }
+
+  .cabecalho-artigo h1,
+  .conteudo-artigo h1 {
+    font-size: 2.4rem;
+  }
+
+  .listas-grid {
+    gap: 25px;
+  }
+
+  .lista-card {
+    width: 100%;
+    min-height: 450px;
+    margin: 20px 0;
+  }
+
+  .lista-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .conteudo-artigo ul,
+  .conteudo-artigo ol {
+    font-size: 1.15rem;
+  }
+}
+
+/* ==========================
+   CELULARES
+========================== */
+
+@media (max-width: 768px) {
+  .artigo {
+    margin: 20px 10px;
+    border-radius: 15px;
+  }
+
+  .cabecalho-artigo,
+  .conteudo-artigo {
+    padding: 20px;
+  }
+
+  .cabecalho-artigo h1,
+  .conteudo-artigo h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .categoria-artigo {
+    font-size: 0.9rem;
+    padding: 5px 12px;
+  }
+
+  .conteudo-artigo p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .conteudo-artigo ul,
+  .conteudo-artigo ol {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .listas-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .lista-card {
+    width: 100%;
+    min-height: 380px;
+    margin: 0;
+  }
+
+  .overlay-lista {
+    padding: 20px;
+  }
+
+  .lista-card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* ==========================
+   CELULARES PEQUENOS
+========================== */
+
+@media (max-width: 480px) {
+  .cabecalho-artigo,
+  .conteudo-artigo {
+    padding: 15px;
+  }
+
+  .cabecalho-artigo h1,
+  .conteudo-artigo h1 {
+    font-size: 1.7rem;
+  }
+
+  .categoria-artigo {
+    font-size: 0.8rem;
+  }
+
+  .conteudo-artigo p {
+    font-size: 0.95rem;
+  }
+
+  .conteudo-artigo ul,
+  .conteudo-artigo ol {
+    font-size: 0.95rem;
+  }
+
+  .lista-card {
+    min-height: 300px;
+  }
+
+  .overlay-lista {
+    padding: 15px;
+  }
+
+  .lista-card h3 {
+    font-size: 1rem;
+    color: yellow;
+  }
+}

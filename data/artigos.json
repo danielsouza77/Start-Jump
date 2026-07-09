@@ -1,0 +1,59 @@
+[
+  {
+    "id": "gta6",
+
+    "titulo": "GTA VI tem data e valores anunciados",
+
+    "descricao": "A Rockstar revelou oficialmente os preços e a data de lançamento do GTA VI.",
+
+    "banner": "./img/Jogos/gta/Banner.webp",
+
+    "imagem": "./img/Jogos/gta/Capa.webp",
+
+    "categoria": "Notícias",
+
+    "autor": "Daniel Souza",
+
+    "fotoautor": "./img/Autor/daniel.webp",
+
+    "data": "25/06/2026 às 08:30",
+
+    "conteudo": [
+      {
+        "tipo": "paragrafo",
+        "texto": "Após meses de rumores, a Rockstar resolveu revelar os preços e as edições do GTA VI."
+      },
+
+      {
+        "tipo": "listas",
+        "titulo": "O GTA VI contará com duas versões:",
+        "listas": [
+          {
+            "titulo": "Versão Standard",
+
+            "src": "./img/Jogos/gta/Standard.webp",
+
+            "itens": ["US$ 79,99", "R$ 449,90"]
+          },
+
+          {
+            "titulo": "Versão Ultimate",
+
+            "src": "./img/Jogos/gta/Ultimate.webp",
+
+            "itens": ["US$ 99,99", "R$ 549,90"]
+          }
+        ]
+      },
+
+      {
+        "tipo": "paragrafo",
+        "texto": "Lembrando que o game será lançado no dia 19 de novembro (PS5 e Xbox Series) deste ano, e é claro que estamos empolgados para jogar. Diz aí, você já fez a pré-venda?"
+      },
+      {
+        "tipo": "video",
+        "src": "https://www.youtube.com/embed/VQRLujxTm3c"
+      }
+    ]
+  }
+]

@@ -23,15 +23,3 @@ function abrirModal() {
 function fecharModal() {
   document.getElementById("modal").style.display = "none";
 }
-
-function mostrarNoticia(id, botao) {
-  const review = document.getElementById(id);
-
-  if (review.classList.contains("ativa")) {
-    review.classList.remove("ativa");
-    botao.innerHTML = "Veja mais";
-  } else {
-    review.classList.add("ativa");
-    botao.innerHTML = "Ver menos";
-  }
-}

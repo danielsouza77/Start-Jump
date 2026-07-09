@@ -1,0 +1,104 @@
+[
+  {
+    "id": "plague-tale",
+    "titulo": "Resonance: A Plague Tale Legacy",
+    "publisher": "Focus Entertainment ",
+    "genero": "Ação • Aventura",
+    "imagem": "./img/Jogos/lancamentos/resonance.webp",
+    "video": "https://www.youtube.com/embed/1r6Cft3qe6I",
+    "data": "27 de Agosto",
+    "plataformas": ["PS5", "Xbox Series X|S", "PC"],
+    "sinopse": "Quinze anos antes de Requiem, jogue como Sophia, uma jovem e destemida saqueadora, em fuga e determinada a desvendar os segredos do seu passado. Mergulhe numa história original que mescla combate, mito e destino, com uma nova abordagem ao universo de A Plague Tale ."
+  },
+  {
+    "id": "dawnwalker",
+    "titulo": "The Blood of Dawnwalker",
+    "publisher": "Bandai Namco",
+    "genero": "Ação • RPG • Fantasia Sombria  ",
+    "imagem": "./img/Jogos/lancamentos/dawnwalker.webp",
+    "video": "https://www.youtube.com/embed/s8nLNmda01c",
+    "data": "3 de Setembro",
+    "plataformas": ["PS5", "Xbox Series X|S", "PC"],
+    "sinopse": "The Blood of Dawnwalker é um RPG de ação e fantasia sombria em mundo aberto que se passa na Europa do século XIV. Você é Coen, humano de dia e vampiro à noite, lutando para salvar sua família em uma história moldada por suas ações e os segredos que descobrir."
+  },
+  {
+    "id": "wolverine",
+    "titulo": "Marvel's Wolverine",
+    "publisher": "Insomniac Games",
+    "genero": "Ação • Aventura  ",
+    "imagem": "./img/Jogos/lancamentos/wolverine.webp",
+    "video": "https://www.youtube.com/embed/OiBo_NgYI5Q",
+    "data": "15 de Setembro",
+    "plataformas": ["PS5"],
+    "sinopse": "Para desvendar os mistérios do seu passado e do homem que ele costumava ser, Wolverine enfrentará o que for preciso, com garras brutais, fúria avassaladora e determinação implacável."
+  },
+  {
+    "id": "control",
+    "titulo": "Control Resonant",
+    "publisher": "Remedy Entertainment",
+    "genero": "Ação • Aventura • RPG  ",
+    "imagem": "./img/Jogos/lancamentos/control.webp",
+    "video": "https://www.youtube.com/embed/WhQm-ExRz60",
+    "data": "24 de Setembro",
+    "plataformas": ["PS5", "Xbox Series X|S", "PC"],
+    "sinopse": "Em CONTROL Resonant, os jogadores explorarão uma Manhattan distorcida à beira da aniquilação paranormal neste emocionante RPG de ação e aventura. Liberte os poderes extraordinários de Dylan Faden enquanto ele luta por sua humanidade e sobrevivência contra uma ameaça cósmica que distorce a realidade."
+  },
+  {
+    "id": "onimusha",
+    "titulo": "Onimusha: Way of the Sword",
+    "publisher": "Capcom",
+    "genero": "Ação • Aventura • RPG ",
+    "imagem": "./img/Jogos/lancamentos/onimusha.webp",
+    "video": "https://www.youtube.com/embed/LNq35HHUtNc?si=GsucxP3GM4oXMniM",
+    "data": "25 de Setembro",
+    "plataformas": ["PS5", "Xbox Series X|S", "Switch 2", "PC"],
+    "sinopse": "Mergulhe em um banho de sangue marcado por intenso combate com espadas. Explore Quioto, a histórica capital japonesa do período Edo, corrompida por nuvens maléficas de Miasma. Cada cenário está envolto em mistério, perigo e intrigas. Lute contra monstruosidades do submundo conhecidas como Genma neste conto de fantasia sombria. Acompanhe a história de um samurai que empunha a Manopla Oni, um artefato místico que concede ao seu portador o poder de matar os Genma. Em meio a confrontos sangrentos e violentos, ele busca uma razão para lutar. Que destino o aguarda no fim de seu caminho?"
+  },
+  {
+    "id": "gears-eday",
+    "titulo": "Gears of War: E-Day",
+    "publisher": "XBOX Game Studios",
+    "genero": "Cover Shooter em terceira pessoa",
+    "imagem": "./img/Jogos/lancamentos/gears.webp",
+    "video": "https://www.youtube.com/embed/yAWz9IIQvt0",
+    "data": "6 de Outubro",
+    "plataformas": ["Xbox Series X|S", "PC", "Nuvem"],
+    "sinopse": "Viva o horror e a brutalidade do Dia da Emergência. Junte-se a Marcus Fenix e Dominic Santiago enquanto a Locust Horde emerge das profundezas, iniciando uma luta desesperada pela sobrevivência."
+  },
+
+  {
+    "id": "castlevania",
+    "titulo": "Castlevania: Belmont's Curse",
+    "publisher": "Konami",
+    "genero": "Ação • Exploração 2D",
+    "imagem": "./img/Jogos/lancamentos/castlevania.webp",
+    "video": "https://www.youtube.com/embed/3k9Yy-o6tpo?si=0DyUWe5QDmScZR4A",
+    "data": "15 de Outubro",
+    "plataformas": ["PS5", "Xbox Series X|S", "Switch", "PC"],
+    "sinopse": "Trevor Belmont, o herói que derrotou Drácula, aventura-se nas ruas em chamas com sua filha, Rose Belmont. Armados com o lendário chicote sagrado, o Matador de Vampiros, eles caçam as feras vindo do imponente castelo. \n Rose logo é puxada para a conspiração sombria que espreita sob eles. Será que ela conseguirá salvar Paris da devastação?\n"
+  },
+
+  {
+    "id": "final-fantasy",
+    "titulo": "Final Fantasy Resonance",
+    "publisher": "Square Enix",
+    "genero": "RPG por turnos ",
+    "imagem": "./img/Jogos/lancamentos/finalfantasy.webp",
+    "video": "https://www.youtube.com/embed/wbsfQYI_IIY?si=IeVVMQGxAzn-REfL",
+    "data": "22 de Outubro",
+    "plataformas": ["PS5", "Xbox Series X|S", "Switch", "Switch 2", "PC"],
+    "sinopse": "Retorne ao mundo em pixels de FINAL FANTASY nessa evolução de suas raízes clássicas. Aventure-se com aliados unidos pelo destino e evoque Visions pra ajudar na batalha e revelar a verdade por trás de uma força que ameaça levar o mundo à ruína."
+  },
+
+  {
+    "id": "gta6",
+    "titulo": "Grand Theft Auto VI",
+    "publisher": "Rockstar Games",
+    "genero": "Ação • Aventura • Mundo Aberto  ",
+    "imagem": "./img/Jogos/destaque/gta6.jpg",
+    "video": "https://www.youtube.com/embed/cv041_93_0Q",
+    "data": "19 de Novembro",
+    "plataformas": ["PS5", "Xbox Series X|S"],
+    "sinopse": "Jason e Lucia sempre souberam que tudo estava contra eles. Mas, depois que um serviço simples dá errado, eles vão parar no lado mais sombrio do lugar mais ensolarado dos Estados Unidos, em meio a uma conspiração criminosa se estendendo por todo o estado de Leonida e são forçados a depender um do outro mais do que nunca para saírem dessa vivos."
+  }
+]

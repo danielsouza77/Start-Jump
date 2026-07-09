@@ -14,6 +14,12 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="./CSS/responsive.css">
   <link rel="icon" type="image/svg+xml" href="./img/icon/icon.svg">
+
+  <script src="./js/renderizador.js" defer></script>
+  <script src="./js/componentes.js" defer></script>
+  <script src="./js/script.js" defer></script>
+  <script src="./js/lancamentos.js" defer></script>
+
   <title>Start Jump</title>
 </head>
 
@@ -42,7 +48,7 @@
     <section class="conteudo-inicio">
       <div class="card-geral">
         <div class="card">
-          <img src="./img/Jogos/gta6.jpg" alt="gta6" fetchpriority="high">
+          <img src="./img/Jogos/destaque/gta6.jpg" alt="gta6" fetchpriority="high">
           <div class="card-conteudo">
             <h2>GTA VI tem data e valores anunciados</h2>
             <p>A Take-Two resolveu revelar quais os preços e edições do GTA 6.</p>
@@ -51,7 +57,7 @@
         </div>
 
         <div class="card">
-          <img src="./img/Jogos/007.webp" alt="007" fetchpriority="high">
+          <img src="./img/Jogos/destaque/007.webp" alt="007" fetchpriority="high">
           <div class="card-conteudo">
             <h2>Jogamos 007:First Light</h2>
             <p>Uma otima recomendação para quem gosta de jogos de ação e aventura.</p>
@@ -60,7 +66,7 @@
         </div>
 
         <div class="card">
-          <img src="./img/Jogos/hellblade.webp" alt="Senua's Saga: Hellblade 2" fetchpriority="high">
+          <img src="./img/Jogos/destaque/hellblade.webp" alt="Senua's Saga: Hellblade 2" fetchpriority="high">
           <div class="card-conteudo">
             <h2>Você precisa jogar Senua's Saga: Hellblade 2</h2>
             <p>A sequência do premiado Hellblade: Senua's Sacrifice.</p>
@@ -73,57 +79,49 @@
 
 
   <section class="lancamentos">
-    <h3> Veja os lançamentos mais aguardados pela nossa equipe:</h3>
 
-    <article class="lista">
-      <h4>Assassin's Creed Black Flag Resynced (PS5, Xbox Series X|S, PC) - 9 de Julho
-        <a class="link-trailer" href="https://youtu.be/WjsTLe7bBUA?si=X2k1CquPUtOdBLDD">Assista o Trailer aqui</a>
-      </h4>
-    </article>
+    <h3>Veja os lançamentos mais aguardados pela nossa equipe:</h3>
 
-    <article class="lista">
-      <h4>Resonance: A Plague Tale Legacy (PS5, Xbox Series X|S, PC) - 27 de Agosto
-        <a class="link-trailer" href="https://youtu.be/1r6Cft3qe6I?si=KWrEci3wZXh8lq0z">Assista o Trailer aqui</a>
-      </h4>
-    </article>
+    <!-- Cards -->
+    <div id="lista-lancamentos"></div>
 
-    <article class="lista">
-      <h4>The Blood of Dawnwalker (PS5, Xbox Series X|S, PC) – 3 de Setembro
-        <a class="link-trailer" href="https://youtu.be/s8nLNmda01c?si=TpeQtI4-WOTz_Qet">Assista o Trailer aqui</a>
-      </h4>
-    </article>
+    <!-- Player -->
+    <section class="player-lancamento">
 
-    <article class="lista">
-      <h4>Marvel’s Wolverine (PS5) – 15 de Setembro
-        <a class="link-trailer" href="https://youtu.be/OiBo_NgYI5Q?si=ecybYRi9DTjmBSqr">Assista o Trailer aqui</a>
-      </h4>
-    </article>
+      <div id="loading-trailer" class="loading-trailer">
 
-    <article class="lista">
-      <h4>Control Resonant (PS5, Xbox Series X|S, PC) – 24 de Setembro
-        <a class="link-trailer" href="https://youtu.be/WhQm-ExRz60?si=_q5cbqGgfUuO9OMH">Assista o Trailer aqui</a>
-      </h4>
-    </article>
+        ▶️Carregando trailer...
 
-    <article class="lista">
-      <h4>Onimusha:Way of the Sword (PS5, Xbox Series X|S, Switch 2, PC) – 25 de Setembro
-        <a class="link-trailer" href="https://youtu.be/WhQm-ExRz60?si=_q5cbqGgfUuO9OMH">Assista o Trailer aqui</a>
-      </h4>
-    </article>
+      </div>
 
-    <article class="lista">
-      <h4>Gears of War:E-Day (Xbox Series X|S, PC) – 6 de Outubro
-        <a class="link-trailer" href="https://youtu.be/yAWz9IIQvt0?si=YeHNQrPtjGccVuQA">Assista o Trailer aqui</a>
-      </h4>
-    </article>
+      <iframe id="video-lancamento" src="" title="Trailer do lançamento" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
 
-    <article class="lista">
-      <h4>Grand Theft Auto 6 (PS5, Xbox Series X|S) – 19 de Novembro
-        <a class="link-trailer" href="https://youtu.be/cv041_93_0Q?si=4alcJExo99rnItDb">Assista o Trailer aqui</a>
-      </h4>
-    </article>
+      <div class="info-player">
+
+        <div class="container-titulo">
+          <h2 id="titulo-lancamento"></h2>
+        </div>
+
+        <div class="meta-lancamento">
+
+          <span id="publisher-lancamento"></span>
+
+          <span id="genero-lancamento"></span>
+
+          <span id="plataformas-lancamento"></span>
+
+          <span id="data-lancamento"></span>
+
+        </div>
+
+        <p id="sinopse-lancamento"></p>
+
+      </div>
+
+    </section>
+
   </section>
-
 
   <footer class="footer">
     <div class="footer-logo">
@@ -144,14 +142,14 @@
     </div>
 
     <div class="footer-copy">
-      <p>© 2026 Start Jump • Desenvolvido por Daniel Souza Barbosa</p>
+      <p>© 2026 Start Jump </p>
     </div>
   </footer>
 
   <!-- botão para voltar para o topo da pagina -->
   <button id="topo">⬆</button>
 
-  <script src="./js/script.js"></script>
+
 </body>
 
 </html>

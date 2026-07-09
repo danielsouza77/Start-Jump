@@ -274,8 +274,13 @@
 
 /* Celulares ate 480px - Recomendações */
 @media (max-width: 480px) {
+  .card-recomendacao {
+    flex-direction: column;
+  }
+
   .card-recomendacao img {
     height: 200px;
+    width: 100%;
   }
 
   .titulo-recomendacoes {
@@ -287,18 +292,29 @@
   }
 }
 
-/* Tablet - Notícias */
-@media (max-width: 1024px) {
-  .titulo-noticias {
-    font-size: 1.8rem;
+/* RESPONSIVIDADE NOTICIAS */
+
+/* ==========================
+   TABLETS
+========================== */
+
+@media (max-width: 992px) {
+  .jogos-noticias {
+    gap: 40px;
+    padding: 20px;
   }
 
   .card-noticias {
-    max-width: 95%;
+    width: 85%;
   }
 
   .card-noticias img {
-    height: 500px;
+    width: 45%;
+    object-fit: cover;
+  }
+
+  .texto-noticias {
+    padding: 20px;
   }
 
   .texto-noticias h2 {
@@ -306,36 +322,57 @@
   }
 
   .texto-noticias p {
-    font-size: 1.3rem;
-  }
-
-  .valores {
-    gap: 30px;
-  }
-
-  .versao1 h3,
-  .versao2 h3 {
-    font-size: 1.6rem;
-  }
-
-  .preços li {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
-/* Celulares ate 768px - Notícias */
+/* ==========================
+   CELULARES
+========================== */
+
 @media (max-width: 768px) {
+  .jogos-noticias {
+    display: block;
+    padding: 15px;
+  }
+
   .titulo-noticias {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .card-noticias {
     width: 100%;
-    border-radius: 15px;
+    flex-direction: column;
+    margin-bottom: 30px;
   }
 
   .card-noticias img {
-    height: 250px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .texto-noticias {
+    padding: 20px;
+  }
+
+  .texto-noticias h2 {
+    font-size: 1.5rem;
+  }
+
+  .texto-noticias p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+/* ==========================
+   CELULARES PEQUENOS
+========================== */
+
+@media (max-width: 480px) {
+  .titulo-noticias {
+    font-size: 1.3rem;
   }
 
   .texto-noticias {
@@ -343,61 +380,11 @@
   }
 
   .texto-noticias h2 {
-    font-size: 1.4rem;
-    white-space: normal;
-    text-align: center;
+    font-size: 1.25rem;
   }
 
   .texto-noticias p {
-    font-size: 1rem;
-    text-align: justify;
-  }
-
-  .valores {
-    flex-direction: column;
-    gap: 25px;
-    margin: 20px 0;
-  }
-
-  .versao1,
-  .versao2 {
-    width: 100%;
-  }
-
-  .versao1 h3,
-  .versao2 h3 {
-    text-align: center;
-    font-size: 1.3rem;
-  }
-
-  .preços {
-    padding-left: 25px;
-  }
-
-  .preços li {
-    font-size: 1rem;
-  }
-
-  .botao {
-    width: 100%;
-    max-width: 300px;
-
-    font-size: 1rem;
-  }
-}
-
-/* Celulares ate 480px - Notícias */
-@media (max-width: 480px) {
-  .card-noticias img {
-    height: 200px;
-  }
-
-  .titulo-noticias {
-    font-size: 1.3rem;
-  }
-
-  .texto-noticias h2 {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
   }
 }
 
@@ -464,5 +451,125 @@
     height: 50px;
     line-height: 50px;
     font-size: 24px;
+  }
+}
+
+/* Responsividade Lançamentos */
+
+/* NOTEBOOK */
+@media (max-width: 1200px) {
+  #lista-lancamentos {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+  }
+
+  .card-lancamento {
+    min-height: 380px;
+  }
+
+  .overlay-lancamento h4 {
+    font-size: 1.4rem;
+  }
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  #lista-lancamentos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .player-lancamento {
+    max-width: 100%;
+  }
+
+  #titulo-lancamento {
+    font-size: 1.8rem;
+  }
+}
+
+/* CELULARES */
+@media (max-width: 768px) {
+  #lista-lancamentos {
+    grid-template-columns: 1fr;
+  }
+
+  .card-lancamento {
+    min-height: 330px;
+  }
+
+  .overlay-lancamento {
+    opacity: 1;
+
+    transform: none;
+
+    background: linear-gradient(transparent 45%, rgba(0, 0, 0, 0.92));
+  }
+
+  .overlay-lancamento h4 {
+    font-size: 1.3rem;
+  }
+
+  .meta-lancamento {
+    gap: 10px;
+  }
+
+  .meta-lancamento span {
+    font-size: 0.85rem;
+
+    padding: 8px 14px;
+  }
+
+  #titulo-lancamento {
+    font-size: 1.6rem;
+  }
+
+  #sinopse-lancamento {
+    font-size: 0.95rem;
+  }
+}
+@media (hover: none) {
+  .overlay-lancamento {
+    opacity: 1;
+
+    transform: none;
+  }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 480px) {
+  .card-lancamento {
+    min-height: 280px;
+  }
+
+  .overlay-lancamento {
+    padding: 18px;
+  }
+
+  .overlay-lancamento h4 {
+    font-size: 1.1rem;
+  }
+
+  #titulo-lancamento {
+    font-size: 1.4rem;
+  }
+
+  .meta-lancamento {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .meta-lancamento span {
+    width: 100%;
+  }
+}
+@media (hover: none) {
+  .overlay-lancamento {
+    opacity: 1;
+
+    transform: none;
   }
 }

@@ -1,8 +1,7 @@
 .jogos-recomendacao {
-  display: grid;
-  gap: 80px; /* Espaço entre os cards */
+  display: flex;
+  gap: 80px;
   max-width: 100%;
-  justify-items: center;
   padding: 10px;
 }
 
@@ -22,10 +21,10 @@
 .texto-recomendacao {
   padding: 20px;
   flex-grow: 1;
+  text-align: justify-all;
 }
 
 .texto-recomendacao h2 {
-  text-align: center;
   font-size: 2rem;
   margin-top: 0;
   white-space: normal;
@@ -34,23 +33,30 @@
 .texto-recomendacao p {
   font-size: 1.6rem;
   color: aliceblue;
+  white-space: wrap;
 }
 
 .card-recomendacao {
   margin: 0 auto;
-  width: 100%;
+  width: 60%;
   max-width: 1600px;
   background: #1e293b;
   border-radius: 20px;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  transition: 0.3s;
 }
 
 .card-recomendacao img {
-  width: 100%;
-  height: 600px;
+  width: 45%;
+  height: 400px;
   object-fit: cover;
+}
+
+.card-recomendacao:hover {
+  transform: translateY(-8px);
+  transition: 0.2s;
 }
 
 .avaliacao {

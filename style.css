@@ -16,5 +16,17 @@
 /* Estilização da pagina contatos */
 @import "./CSS/contatos.css";
 
+/* Estilização da pagina artigos */
+@import "./CSS/artigo.css";
+
+/* Estilização da pagina reviews */
+@import "./CSS/reviews.css";
+
 /* Responsividade das paginas  */
 @import "./CSS/responsive.css";
+
+/* Estilos reutilizados pelos artigos e pelas reviews */
+@import "./CSS/blocos.css";
+
+/* estilização dos lançamentos */
+@import "./CSS/lancamentos.css";

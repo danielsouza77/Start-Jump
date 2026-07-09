@@ -15,6 +15,12 @@ body {
   padding: 0;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -113,9 +119,6 @@ main {
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 /* body da pagina recomendações */
@@ -125,9 +128,6 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 /* body da pagina noticias */
@@ -137,9 +137,6 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 /* body da pagina contatos */
@@ -149,7 +146,30 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+}
+
+/* body da pagina review */
+.review-body {
+  background-color: rgb(34, 36, 42);
+  color: #e8e8e8;
+}
+
+/* body da pagina artigo */
+.artigo-body {
+  background-color: rgb(34, 36, 42);
+  color: #e8e8e8;
+}
+
+.botao {
+  display: block;
+  padding: 10px 5px;
+  background-color: #007bffa2;
+  color: yellow;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  width: 50%;
+  max-width: 400px;
+  margin-left: 10px;
 }
