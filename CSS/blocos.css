@@ -8,6 +8,12 @@
   margin: 40px 0 20px;
 }
 
+.subtitulo-conteudo {
+  font-size: 2rem;
+  color: rgb(245, 241, 171);
+  margin: 40px 0 20px;
+}
+
 /* ==========================
    PARÁGRAFOS
 ========================== */
@@ -86,6 +92,12 @@
   height: 1px;
   background: #334155;
   margin: 40px 0;
+}
+
+.card-noticias:not(:last-child),
+.card-recomendacao:not(:last-child) {
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* =========================== 

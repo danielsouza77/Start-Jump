@@ -155,7 +155,7 @@ function criarArtigoCompleto(artigo) {
             ${artigo.categoria}
         </span>
 
-        <h1>${artigo.titulo}</h1>
+        <h1>${artigo.tituloCard || artigo.titulo}</h1>
 
        ${criarAutor(artigo)}
 
@@ -187,24 +187,35 @@ function criarArtigoCompleto(artigo) {
  */
 function criarCardReview(review) {
   return `
-        <article class="card-recomendacao">
-            <img
-                src="${review.imagem}"
-                alt="${review.titulo}"
-                loading="lazy"
-            >
-            <div class="texto-recomendacao">
-                <h2>${review.titulo}</h2>
-                <p>${review.descricao}</p>
-                <a
-                    class="botao"
-                    href="./review.html?id=${review.id}"
-                >
-                    Ver Review 
-                </a>
-            </div>
-        </article>
-    `;
+    <article class="card-recomendacao">
+
+      <img
+        src="${review.imagem}"
+        alt="${review.titulo}"
+        loading="lazy"
+      >
+
+      <div class="texto-recomendacao">
+
+        <h2 class="titulo-card-review">
+          ${review.tituloCard || review.titulo}
+        </h2>
+
+        <p>
+          ${review.descricao}
+        </p>
+
+        <a
+          class="botao"
+          href="./review.html?id=${review.id}"
+        >
+          Ver Review
+        </a>
+
+      </div>
+
+    </article>
+  `;
 }
 
 /**
@@ -224,43 +235,89 @@ function criarReviewCompleta(review) {
       switch (bloco.tipo) {
         case "titulo":
           return `
-    <h2 class="titulo-conteudo">
-      ${bloco.texto}
-    </h2>
-  `;
+            <h2 class="titulo-conteudo">
+              ${bloco.texto}
+            </h2>
+          `;
+
         case "paragrafo":
           return `
-          <p>
-            ${bloco.texto}
-          </p>
-        `;
+    ${
+      bloco.subtitulo
+        ? `<h3 class="subtitulo-conteudo">${bloco.subtitulo}</h3>`
+        : ""
+    }
+
+    <p>
+      ${bloco.texto}
+    </p>
+  `;
 
         case "imagem":
           return `
-          <img
-            src="${bloco.src}"
-            alt="${bloco.alt}"
-            class="imagem-conteudo"
-          >
-        `;
+            <img
+              src="${bloco.src}"
+              alt="${bloco.alt}"
+              class="imagem-conteudo"
+            >
+          `;
 
         case "video":
           return `
-          <div class="video-conteudo">
+            <div class="video-conteudo">
 
-            <iframe
-              width="100%"
-              height="650"
-              src="${bloco.src}"
-              title="${review.titulo}"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen>
-            </iframe>
+              <iframe
+                width="100%"
+                height="650"
+                src="${bloco.src}"
+                title="${review.titulo}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
 
-          </div>
-        `;
+            </div>
+          `;
+
+        case "listas":
+          return `
+    <div class="listas-grid-review">
+
+      ${bloco.listas
+        .map(
+          (lista) => `
+            <div class="lista-card-review">
+
+             ${
+               lista.src
+                 ? `
+                 <img
+                 src="${lista.src}"
+                 alt="${lista.titulo || ""}"
+                 class="imagem-lista-review"
+                 >
+                  `
+                 : ""
+             }
+
+              <div class="overlay-review">
+
+                ${lista.titulo ? `<h3>${lista.titulo}</h3>` : ""}
+
+                <ul>
+                  ${lista.itens.map((item) => `<li>${item}</li>`).join("")}
+                </ul>
+
+              </div>
+
+            </div>
+          `,
+        )
+        .join("")}
+
+    </div>
+  `;
 
         default:
           return "";
@@ -268,51 +325,77 @@ function criarReviewCompleta(review) {
     })
     .join("");
 
-  const positivos = review.pontosPositivos
-    .map((item) => `<li>${item}</li>`)
-    .join("");
+  // Pontos positivos (opcional)
+  const positivos = review.pontosPositivos?.length
+    ? `
+      <div class="pontos-positivos">
 
-  const negativos = review.pontosNegativos
-    .map((item) => `<li>${item}</li>`)
-    .join("");
+        <h2>Pontos Positivos</h2>
+
+        <ul>
+
+          ${review.pontosPositivos.map((item) => `<li>${item}</li>`).join("")}
+
+        </ul>
+
+      </div>
+    `
+    : "";
+
+  // Pontos negativos (opcional)
+  const negativos = review.pontosNegativos?.length
+    ? `
+      <div class="pontos-negativos">
+
+        <h2>Pontos Negativos</h2>
+
+        <ul>
+
+          ${review.pontosNegativos.map((item) => `<li>${item}</li>`).join("")}
+
+        </ul>
+
+      </div>
+    `
+    : "";
 
   return `
 
     <article class="review">
 
-     <div class="cabecalho-review">
+      <div class="cabecalho-review">
 
-    <span class="categoria-review">
-        ${review.categoria}
-    </span>
+        <span class="categoria-review">
+          ${review.categoria}
+        </span>
 
-    <h1>
-        ${review.titulo}
-    </h1>
+      <h1 class="titulo-review">
+    ${review.titulo}
+</h1>
 
-    ${criarAutor(review)}
+        ${criarAutor(review)}
 
-    <div class="detalhes-review">
+        <div class="detalhes-review">
 
-        <span>
+          <span>
             ⭐ ${review.nota}
-        </span>
+          </span>
 
-        <span>
+          <span>
             ${review.desenvolvedora}
-        </span>
+          </span>
 
-        <span>
+          <span>
             ${review.genero}
-        </span>
+          </span>
 
-        <span>
+          <span>
             ${review.plataformas.join(", ")}
-        </span>
+          </span>
 
-    </div>
+        </div>
 
-</div>
+      </div>
 
       <img
         class="banner-review"
@@ -321,36 +404,22 @@ function criarReviewCompleta(review) {
       >
 
       <div class="conteudo-review">
-       
+
         ${conteudo}
 
-        <section class="avaliacao">
+        ${
+          review.pontosPositivos?.length || review.pontosNegativos?.length
+            ? `
+          <section class="avaliacao">
 
-          <div class="pontos-positivos">
+            ${positivos}
 
-            <h2>Pontos Positivos</h2>
+            ${negativos}
 
-            <ul>
-
-              ${positivos}
-
-            </ul>
-
-          </div>
-
-          <div class="pontos-negativos">
-
-            <h2>Pontos Negativos</h2>
-
-            <ul>
-
-              ${negativos}
-
-            </ul>
-
-          </div>
-
-        </section>
+          </section>
+        `
+            : ""
+        }
 
       </div>
 
@@ -358,7 +427,6 @@ function criarReviewCompleta(review) {
 
   `;
 }
-
 /**
  * Cria o componente de autor.
  * @param {Object} dados

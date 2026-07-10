@@ -2,7 +2,9 @@
   {
     "id": "007",
 
-    "titulo": "007 First Light",
+    "tituloCard": "007 First Light",
+
+    "titulo": "007: First Light — Tão Envolvente que até o Q Deixaria os Gadgets de Lado",
 
     "descricao": "Se você é fã de jogos de ação e aventura com foco em espionagem, esse jogo é para você. Então ja pegue seu Vesper Martini (batido e não mexido) e veja a nossa analise de 007 First Light.",
 
@@ -83,6 +85,109 @@
       "Falta de dublagem, o jogo conta apenas com legendas em português.",
       "A durabilidade do jogo, podendo terminar em menos de 15 horas.",
       "Cenarios repetitivos"
+    ]
+  },
+
+  {
+    "id": "hellblade",
+
+    "tituloCard": "Senua's Saga: Hellblade II",
+
+    "titulo": "Senua's Saga: Hellblade II — Espetáculo Visual ou Filme Interativo Interminável?",
+
+    "descricao": "Senua's Saga: Hellblade II — Mais arte do que jogo? Análise detalhada com tudo o que você precisa saber sobre o game.",
+
+    "categoria": "Review",
+
+    "banner": "./img/Jogos/hellblade/banner.webp",
+
+    "imagem": "./img/Jogos/hellblade/capa.webp",
+
+    "autor": "Daniel Souza ",
+
+    "fotoautor": "./img/autor/daniel.webp",
+
+    "data": "10/07/2026 às 20:30",
+
+    "nota": 7.2,
+
+    "desenvolvedora": "Ninja Theory",
+
+    "genero": "Ação • Aventura",
+
+    "plataformas": ["Xbox Series X|S", "PC", "PlayStation 5"],
+
+    "conteudo": [
+      {
+        "tipo": "paragrafo",
+        "subtitulo": "Senua's Saga: Hellblade II é um Filme Interativo Interminável?",
+        "titulo": "Introdução: A Linha Tênue Entre Jogo e Cinema",
+        "texto": "Lançado pela Ninja Theory, Senua's Saga: Hellblade II chegou cercado de expectativas colossais(Pelo menos por mim). Mas, ao terminar a jornada de cerca de 6 a 7 horas pela Islândia viking, a grande pergunta que fica no ar é: isso é realmente um videogame ou uma demonstração técnica disfarçada de filme interativo?"
+      },
+
+      {
+        "tipo": "paragrafo",
+        "texto": "Se avaliarmos Hellblade II puramente pelo seu poder técnico e artístico, ele facilmente flerta com a perfeição. Porém, quando deixamos os gráficos de lado e começamos a apertar os botões, é aí que o jogo se mostra excessivamente raso e engessado."
+      },
+
+      {
+        "tipo": "video",
+        "src": "https://www.youtube.com/embed/fpX39HY7ujI?si=LvggmrPJsMg4yABY",
+        "alt": "Gameplay"
+      },
+
+      {
+        "tipo": "listas",
+        "listas": [
+          {
+            "titulo": "O Lado Positivo: Um Espetáculo Técnico Sem Precedentes",
+            "src": "./img/Jogos/hellblade/imagem-3.webp",
+            "itens": [
+              "Gráficos Fotorrealistas: O jogo redefine o que chamamos de \"nova geração\". As expressões faciais de Senua, as texturas de lama, sangue e a iluminação da Islândia são absurdas de tão reais. Não há interface na tela (HUD), o que transforma cada segundo em uma cena de cinema.",
+              "Áudio Binaural (Obrigatório usar fones!): O design de som continua sendo a alma da franquia. As vozes na cabeça de Senua (a psicose) vêm de todas as direções, sussurrando dúvidas, avisos e medos. O som ambiente da chuva, dos ventos e dos grunhidos dos gigantes criam uma atmosfera sufocante e impecável.",
+              "Evolução Narrativa: Diferente do primeiro jogo, que era focado no luto puro e isolado, aqui Senua interage com outros personagens. Ela tenta salvar pessoas e enfrentar gigantes literais (e metafóricos), tornando a história mais madura e ligeiramente mais esperançosa."
+            ]
+          },
+
+          {
+            "titulo": "O Lado Negativo: Cadê o Gameplay?",
+            "src": "./img/Jogos/hellblade/imagem-5.webp",
+            "itens": [
+              "Combate Coreografado, mas Simplista: Os combates são brutais e plasticamente lindos. Você sente o peso de cada espada cortando a carne. Porém, mecanicamente, é mais simples que o primeiro jogo. Senua só enfrenta um inimigo por vez, em sequências totalmente scriptadas. É basicamente uma dança de esquiva, aparar (parry) e atacar. Falta profundidade e variedade de inimigos.",
+              "Os quebra-cabeças baseados em perspectiva (encontrar formas no cenário) retornam. Embora estejam um pouco mais variados do que alinhar runas repetitivas, eles quebram o ritmo frenético da narrativa e se tornam cansativos rapidamente.",
+              "Ritmo de Caminhada Lenta: Grande parte da experiência consiste em empurrar o analógico para a frente enquanto Senua caminha lentamente por cenários lineares. O jogo não te dá liberdade nenhuma de exploração, agindo quase como um trilho de trem cinematográfico."
+            ]
+          }
+        ]
+      },
+
+      {
+        "tipo": "paragrafo",
+        "subtitulo": "Veredito Final",
+        "texto": "Senua's Saga: Hellblade II não foi feito para quem busca ação desenfreada, árvores de habilidades ou mundos abertos para explorar. Ele é uma experiência psicológica e sensorial linear."
+      },
+
+      {
+        "tipo": "paragrafo",
+        "texto": "Se você amou o primeiro jogo pelo clima e pela história, vai achar este incrível. Mas se você esperava uma evolução mecânica e um \"jogo de verdade\" com sistemas complexos, vai se frustrar com a passividade do gameplay. É um espetáculo visual inegável, mas que cobra o preço sacrificando a interatividade."
+      },
+
+      {
+        "tipo": "listas",
+        "listas": [
+          {
+            "src": "./img/Jogos/hellblade/imagem-6.webp",
+
+            "itens": [
+              "História/Narrativa: 8.5/10",
+              "Gráficos e Arte: 10/10",
+              "Áudio e Trilha Sonora: 10/10",
+              "Jogabilidade/Gameplay: 5.0/10",
+              "Nota Final: 7.2"
+            ]
+          }
+        ]
+      }
     ]
   }
 ]
