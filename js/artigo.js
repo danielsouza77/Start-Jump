@@ -28,6 +28,9 @@ async function iniciarArtigo() {
 
     // Renderiza o artigo
     container.innerHTML = criarArtigoCompleto(artigo);
+
+    // Inicializa o player do YouTube
+    iniciarPlayerYoutube();
   } catch (erro) {
     console.error("Erro ao carregar artigo:", erro);
   }

@@ -28,6 +28,9 @@ async function iniciarReview() {
 
     // Renderiza a review
     container.innerHTML = criarReviewCompleta(review);
+
+    // Inicializa os players do YouTube
+    iniciarPlayerYoutube();
   } catch (erro) {
     console.error("Erro ao carregar review:", erro);
   }

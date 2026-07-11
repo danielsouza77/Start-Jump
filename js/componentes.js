@@ -24,7 +24,10 @@ function criarCardArtigo(artigo) {
             <img
                 src="${artigo.imagem}"
                 alt="${artigo.titulo}"
-                loading="lazy"
+                  width="600"
+    height="338"
+                 loading="lazy"
+    decoding="async"
             >
             <div class="texto-noticias">
                 <h2>${artigo.titulo}</h2>
@@ -67,26 +70,15 @@ function criarArtigoCompleto(artigo) {
               src="${bloco.src}"
               alt="${bloco.alt}"
               class="imagem-conteudo"
+                 width="1200"
+    height="675"
+               loading="lazy"
+    decoding="async"
             >
           `;
 
         case "video":
-          return `
-            <div class="video-conteudo">
-
-              <iframe
-                width="100%"
-                height="650"
-                src="${bloco.src}"
-                title="${artigo.titulo}"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-              </iframe>
-
-            </div>
-          `;
+          return criarPlayerYoutube(bloco, artigo.titulo);
 
         case "lista":
           return `
@@ -117,6 +109,10 @@ function criarArtigoCompleto(artigo) {
               src="${lista.src}"
               alt="${lista.titulo}"
               class="imagem-lista"
+              width="900"
+    height="1200"
+               loading="lazy"
+    decoding="async"
             >
 
             <div class="overlay-lista">
@@ -165,6 +161,10 @@ function criarArtigoCompleto(artigo) {
         class="banner-artigo"
         src="${artigo.banner}"
         alt="${artigo.titulo}"
+         width="1400"
+    height="700"
+         loading="lazy"
+    decoding="async"
     >
 
     <div class="conteudo-artigo">
@@ -192,7 +192,11 @@ function criarCardReview(review) {
       <img
         src="${review.imagem}"
         alt="${review.titulo}"
-        loading="lazy"
+        width="600"
+         height="338"
+         loading="lazy"
+    decoding="async"
+    fetchpriority="high"
       >
 
       <div class="texto-recomendacao">
@@ -259,26 +263,15 @@ function criarReviewCompleta(review) {
               src="${bloco.src}"
               alt="${bloco.alt}"
               class="imagem-conteudo"
+              width="1200"
+    height="675"
+              loading="lazy"
+              decoding="async"
             >
           `;
 
         case "video":
-          return `
-            <div class="video-conteudo">
-
-              <iframe
-                width="100%"
-                height="650"
-                src="${bloco.src}"
-                title="${review.titulo}"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-              </iframe>
-
-            </div>
-          `;
+          return criarPlayerYoutube(bloco, review.titulo);
 
         case "listas":
           return `
@@ -296,6 +289,10 @@ function criarReviewCompleta(review) {
                  src="${lista.src}"
                  alt="${lista.titulo || ""}"
                  class="imagem-lista-review"
+                 width="900"
+    height="1200"
+                  loading="lazy"
+    decoding="async"
                  >
                   `
                  : ""
@@ -401,6 +398,10 @@ function criarReviewCompleta(review) {
         class="banner-review"
         src="${review.banner}"
         alt="${review.titulo}"
+        width="1400"
+    height="700"
+         loading="lazy"
+    decoding="async"
       >
 
       <div class="conteudo-review">
@@ -440,6 +441,10 @@ function criarAutor(dados) {
         src="${dados.fotoautor}"
         alt="${dados.autor}"
         class="foto-autor"
+        width="120"
+    height="120"
+         loading="lazy"
+    decoding="async"
       >
 
       <span class="nome-autor">
@@ -487,6 +492,10 @@ function criarCardLancamento(lancamento) {
                 src="${lancamento.imagem}"
                 alt="${lancamento.titulo}"
                 class="imagem-lancamento"
+                  width="1600"
+    height="900"
+                 loading="lazy"
+    decoding="async"
             >
 
             <div class="overlay-lancamento">
@@ -508,4 +517,150 @@ function criarCardLancamento(lancamento) {
         </article>
 
     `;
+}
+
+/**
+ * Cria um player do YouTube utilizando a thumbnail oficial.
+ * @param {Object} bloco
+ * @param {string} titulo
+ * @returns {string}
+ */
+
+/**
+ * Extrai o ID de qualquer URL do YouTube.
+ */
+
+function extrairIdYoutube(url) {
+  try {
+    const u = new URL(url);
+
+    // https://youtu.be/VIDEO_ID
+    if (u.hostname.includes("youtu.be")) {
+      return u.pathname.substring(1);
+    }
+
+    // https://youtube.com/watch?v=VIDEO_ID
+    if (u.searchParams.has("v")) {
+      return u.searchParams.get("v");
+    }
+
+    // https://youtube.com/embed/VIDEO_ID
+    if (u.pathname.includes("/embed/")) {
+      return u.pathname.split("/embed/")[1];
+    }
+
+    return "";
+  } catch {
+    return "";
+  }
+}
+
+function criarPlayerYoutube(bloco, titulo) {
+  // Extrai o ID do vídeo
+  const videoId = extrairIdYoutube(bloco.src);
+
+  // Thumbnail em alta resolução
+  const thumbMax = `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
+
+  // Thumbnail padrão (caso a maxres não exista)
+  const thumbHQ = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+
+  return `
+
+    <div
+      class="youtube-player"
+      data-video="${bloco.src}"
+    >
+
+      <img
+
+        src="${thumbMax}"
+
+        data-fallback="${thumbHQ}"
+
+        alt="${titulo}"
+
+        class="youtube-thumb"
+
+        loading="lazy"
+
+        decoding="async"
+
+      >
+
+      <button
+
+        class="youtube-play"
+
+        aria-label="Assistir vídeo"
+
+      >
+
+        ▶
+
+      </button>
+
+    </div>
+
+  `;
+}
+
+/**
+ * Inicializa todos os players do YouTube.
+ */
+
+/**
+ * Converte qualquer URL do YouTube para o formato Embed.
+ */
+function converterParaEmbed(url) {
+  const id = extrairIdYoutube(url);
+
+  return `https://www.youtube-nocookie.com/embed/${id}`;
+}
+
+function iniciarPlayerYoutube() {
+  const players = document.querySelectorAll(".youtube-player");
+
+  players.forEach((player) => {
+    // Corrige thumbnails que não possuem maxresdefault
+    const imagem = player.querySelector(".youtube-thumb");
+
+    imagem.onerror = function () {
+      this.src = this.dataset.fallback;
+    };
+
+    player.addEventListener("click", () => {
+      if (player.dataset.loaded) return;
+
+      player.dataset.loaded = "true";
+
+      const separador = player.dataset.video.includes("?") ? "&" : "?";
+
+      player.innerHTML = `
+
+        <iframe
+
+          width="100%"
+
+          height="650"
+
+       src="${converterParaEmbed(player.dataset.video)}?autoplay=1"
+
+          title="YouTube"
+
+          loading="lazy"
+
+          frameborder="0"
+
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+
+          referrerpolicy="strict-origin-when-cross-origin"
+
+          allowfullscreen
+
+        ></iframe>
+
+      `;
+    });
+  });
 }

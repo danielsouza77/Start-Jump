@@ -53,6 +53,62 @@
   border-radius: 15px;
 }
 
+.youtube-player {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  margin: 40px 0;
+}
+
+.youtube-thumb {
+  width: 100%;
+
+  display: block;
+
+  transition: 0.35s;
+}
+
+.youtube-player:hover .youtube-thumb {
+  transform: scale(1.03);
+}
+
+.youtube-play {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 90px;
+
+  height: 90px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ff0000;
+
+  color: white;
+
+  font-size: 2rem;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.youtube-play:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
 /* ==========================
    LISTAS
 ========================== */
