@@ -1,0 +1,339 @@
+/* =======================================================
+   START JUMP
+   Páginas Institucionais
+   (Privacidade, Cookies, Segurança e Termos)
+======================================================= */
+
+.pagina-legal {
+  width: 92%;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 50px;
+  background: #1e293b;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* ==========================================
+   Cabeçalho
+========================================== */
+
+.cabecalho-legal {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cabecalho-legal h1 {
+  color: #ffd700;
+
+  font-size: 3rem;
+
+  margin-bottom: 15px;
+}
+
+.cabecalho-legal p {
+  color: #94a3b8;
+
+  font-size: 1rem;
+}
+
+/* ==========================================
+   Seções
+========================================== */
+
+.pagina-legal section {
+  margin-bottom: 55px;
+}
+
+.pagina-legal h2 {
+  color: #38bdf8;
+
+  font-size: 2rem;
+
+  margin-bottom: 20px;
+
+  border-left: 6px solid #ffd700;
+
+  padding-left: 18px;
+}
+
+.pagina-legal h3 {
+  color: #ffd700;
+
+  margin-top: 30px;
+
+  margin-bottom: 15px;
+
+  font-size: 1.4rem;
+}
+
+.pagina-legal p {
+  color: #e2e8f0;
+
+  font-size: 1.15rem;
+
+  line-height: 1.9;
+
+  text-align: justify;
+}
+
+.pagina-legal strong {
+  color: #ffd700;
+}
+
+.pagina-legal em {
+  color: #38bdf8;
+}
+
+/* ==========================================
+   Listas
+========================================== */
+
+.pagina-legal ul,
+.pagina-legal ol {
+  color: #e2e8f0;
+
+  padding-left: 28px;
+
+  line-height: 1.9;
+
+  font-size: 1.1rem;
+}
+
+.pagina-legal li {
+  margin-bottom: 10px;
+}
+
+/* ==========================================
+   Links
+========================================== */
+
+.pagina-legal a {
+  color: #38bdf8;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.pagina-legal a:hover {
+  color: #ffd700;
+}
+
+/* ==========================================
+   Tabelas
+========================================== */
+
+.pagina-legal table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-top: 30px;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+}
+
+.pagina-legal th {
+  background: #0f172a;
+
+  color: #ffd700;
+
+  padding: 18px;
+
+  text-align: left;
+
+  font-size: 1.1rem;
+}
+
+.pagina-legal td {
+  padding: 18px;
+
+  border-bottom: 1px solid #334155;
+
+  color: #e2e8f0;
+}
+
+.pagina-legal tr {
+  transition: 0.3s;
+}
+
+.pagina-legal tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* ==========================================
+   Cards informativos
+========================================== */
+
+.aviso-legal {
+  background: rgba(255, 215, 0, 0.08);
+
+  border-left: 6px solid #ffd700;
+
+  padding: 25px;
+
+  border-radius: 15px;
+
+  margin: 40px 0;
+}
+
+.aviso-legal h3 {
+  margin-top: 0;
+}
+
+.aviso-legal p {
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   Caixa de destaque
+========================================== */
+
+.destaque-legal {
+  background: #0f172a;
+
+  border: 1px solid #334155;
+
+  border-radius: 15px;
+
+  padding: 30px;
+
+  margin: 35px 0;
+}
+
+.destaque-legal h3 {
+  margin-top: 0;
+}
+
+.destaque-legal p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   Navegação entre páginas legais
+========================================== */
+
+.links-legais {
+  margin-top: 70px;
+
+  padding-top: 35px;
+
+  border-top: 1px solid #334155;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 15px;
+}
+
+.links-legais a {
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: #bdbdbd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.links-legais a:hover {
+  background: #ffd700;
+  color: #000;
+}
+
+/* ==========================================
+   Botão voltar
+========================================== */
+
+.botao-voltar {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 14px 24px;
+
+  background: #ffd700;
+
+  color: #000;
+
+  font-weight: 600;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+
+  margin-bottom: 40px;
+}
+
+.botao-voltar:hover {
+  transform: translateY(-3px);
+}
+
+/* ==========================================
+   Rodapé
+========================================== */
+
+.rodape-legal {
+  margin-top: 70px;
+
+  text-align: center;
+
+  color: #94a3b8;
+
+  font-size: 0.95rem;
+}
+
+/* ==========================================
+   Responsividade
+========================================== */
+
+@media (max-width: 992px) {
+  .pagina-legal {
+    padding: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pagina-legal {
+    width: 95%;
+
+    padding: 25px;
+
+    margin: 30px auto;
+  }
+
+  .cabecalho-legal h1 {
+    font-size: 2.2rem;
+  }
+
+  .pagina-legal h2 {
+    font-size: 1.6rem;
+  }
+
+  .pagina-legal h3 {
+    font-size: 1.2rem;
+  }
+
+  .pagina-legal p,
+  .pagina-legal li {
+    font-size: 1rem;
+  }
+
+  .pagina-legal table {
+    display: block;
+
+    overflow-x: auto;
+  }
+
+  .links-legais {
+    flex-direction: column;
+  }
+}

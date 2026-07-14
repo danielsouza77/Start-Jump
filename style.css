@@ -30,3 +30,6 @@
 
 /* estilização dos lançamentos */
 @import "./CSS/lancamentos.css";
+
+/* Páginas Institucionais(Privacidade, Cookies, Segurança e Termos) */
+@import "./CSS/legal.css";
